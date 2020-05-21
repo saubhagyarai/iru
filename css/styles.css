@@ -657,7 +657,7 @@ input[type="checkbox"] {
 
 .navbar-custom .navbar-brand.logo-image img {
   width: 113px;
-  height: 34px;
+  height: 60px;
   margin-bottom: 1px;
   -webkit-backface-visibility: hidden;
 }
@@ -823,8 +823,9 @@ input[type="checkbox"] {
   padding-top: 6.875rem;
   padding-bottom: 6.375rem;
   background-color: #262431;
+  background: url("../images/video-background.jpg") center center no-repeat;
+  background-size: cover;
 }
-
 .slider-1 .slider-container {
   position: relative;
 }
@@ -1369,18 +1370,26 @@ input[type="checkbox"] {
   margin-bottom: 3.75rem;
   font-size: 1rem;
   line-height: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .form .list-unstyled .fas,
 .form .list-unstyled .fab {
   margin-right: 0.5rem;
   font-size: 0.875rem;
-  color: #00c9db;
+  color: #fff;
 }
 
 .form .list-unstyled .fa-phone {
   vertical-align: 3%;
+}
+
+.form .con-left {
+  background: #00c9db;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
+  min-height: 380px;
 }
 
 /**********************/
@@ -1713,12 +1722,13 @@ a:hover.back-to-top {
 
   /* Contact */
   .form .list-unstyled li {
-    display: inline-block;
+    display: block;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
+    margin-top: 15px;
   }
 
-  .form .list-unstyled .address {
+  .form .con-left .address {
     display: block;
   }
   /* end of contact */
@@ -2096,4 +2106,77 @@ a:hover.back-to-top {
 .slider-1 h2 {
   margin-bottom: 3.125rem;
   text-align: center;
+}
+
+/* Technologies Section */
+.tech {
+  position: relative;
+  z-index: 1;
+}
+
+.tech .box {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f2c3d;
+  margin: 25px;
+}
+.tech .box:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.tech .box:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: #fff;
+  z-index: -1;
+  filter: blur(40px);
+}
+
+.tech .box:before,
+.tech .box:after {
+  background: linear-gradient(235deg, #4633af, #010615, #00c9db);
+}
+
+.tech .box .glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tech .box .content {
+  padding: 20px;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+}
+
+.tech .box i {
+  font-size: 40px;
+  margin: 10px;
+  color: #00c9db;
+}
+
+.tech .box .content p {
+  text-align: justify;
 }
